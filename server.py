@@ -51,6 +51,11 @@ def run_schedule():
 def home():
     return "포켓몬고 이벤트 서버 정상 작동 중!"
 
+@app.route("/test")
+def manual_test():
+    crawl_pokemon_events()
+    return "포켓몬고 이벤트 수동 호출 완료!"
+
 if __name__ == "__main__":
     t = threading.Thread(target=run_schedule)
     t.start()
