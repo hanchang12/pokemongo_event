@@ -62,10 +62,17 @@ def home():
     return "포켓몬고 이벤트 서버 정상 작동 중!"
 
 # 테스트용 수동 호출 라우트
+#@app.route("/test")
+#def manual_test():
+#    crawl_pokemon_events()
+#    return "포켓몬고 이벤트 수동 호출 완료!"
+
 @app.route("/test")
 def manual_test():
-    crawl_pokemon_events()
-    return "포켓몬고 이벤트 수동 호출 완료!"
+    # 테스트용으로 크롤링 없이 바로 IFTTT 호출
+    test_message = "[TEST] 포켓몬고 이벤트 테스트 알림입니다!"
+    send_to_ifttt(test_message)
+    return "포켓몬고 테스트 알림 전송 완료!"
 
 # 스케줄러 루프
 def run_schedule():
