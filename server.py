@@ -8,7 +8,7 @@ import time
 app = Flask(__name__)
 
 # IFTTT Webhook URL 입력 (IFTTT 설정할 때 받을 것)
-IFTTT_WEBHOOK_URL = "https://maker.ifttt.com/trigger/YOUR_EVENT_NAME/with/key/YOUR_IFTTT_KEY"
+IFTTT_WEBHOOK_URL = "https://maker.ifttt.com/trigger/pokemon_event_alert/with/key/dNtG45LvB4JL5nkREYOaXy"
 
 # 포켓몬고 이벤트 크롤링
 def crawl_pokemon_events():
